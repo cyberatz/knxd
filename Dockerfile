@@ -1,5 +1,7 @@
 FROM arm32v6/alpine:latest
 
+COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
+
 RUN set -xe \
     && apk update \
     && apk add build-base \
