@@ -1,4 +1,4 @@
-https://travis-ci.org/spanghf37/knxd.svg?branch=master
+[![Build Status](https://travis-ci.org/spanghf37/knxd.svg?branch=master)
 
 # knxd
 alpine-knxd docker container for raspberry-pi
