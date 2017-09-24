@@ -13,9 +13,9 @@ script:
   tar xzf qemu-arm-static.tar.gz &&
   popd
 # build image
-- docker build -t spanghf37/knxd:build .
+- docker build -t spanghf37/knxd .
 # test image
-- docker run spanghf37/knxd:build uname -a
+- docker run spanghf37/knxd uname -a
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ]; then
