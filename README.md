@@ -1,7 +1,7 @@
 ![Build Status](https://travis-ci.org/spanghf37/knxd.svg?branch=master)
 
 # knxd
-alpine-knxd docker container for raspberry-pi
+alpine-knxd docker container for raspberry-pi 64bits
 
 # 1. Configuration files
 
