@@ -22,7 +22,7 @@ script:
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     TAG=$(grep "FROM " Dockerfile | sed 's/.*://')
     docker tag spanghf37/knxd spanghf37/knxd:$TAG
-    docker tag spanghf37/knxd spanghf37/knxd:latest
+    docker tag spanghf37/knxd spanghf37/knxd:arm64
     docker push spanghf37/knxd:$TAG
-    docker push spanghf37/knxd:latest
+    docker push spanghf37/knxd:arm64
   fi
