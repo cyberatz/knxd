@@ -1,6 +1,4 @@
-FROM arm64v8/alpine:latest
-
-COPY tmp/qemu-aarch64-static /usr/bin/qemu-aarch64-static
+FROM alpine/alpine:latest
 
 RUN set -xe \
     && apk update \
