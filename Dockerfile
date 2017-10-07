@@ -1,4 +1,4 @@
-FROM alpine/alpine:latest
+FROM alpine:latest
 
 RUN set -xe \
     && apk update \
