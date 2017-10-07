@@ -3,26 +3,17 @@ services:
 - docker
 language: bash
 script:
-# prepare qemu
-- docker run --rm --privileged multiarch/qemu-user-static:register --reset
-# get qemu-aarch64-static binary (arm 64bits)
-- mkdir tmp
-- >
-  pushd tmp &&
-  curl -L -o qemu-aarch64-static.tar.gz https://github.com/multiarch/qemu-user-static/releases/download/v2.9.1/qemu-aarch64-static.tar.gz &&
-  tar xzf qemu-aarch64-static.tar.gz &&
-  popd
 # build image
 - docker build -t spanghf37/knxd .
 # test image
 - docker run spanghf37/knxd uname -a
 # push image
 - >
-  if [ "$TRAVIS_BRANCH" == "master" ]; then
+  if [ "$TRAVIS_BRANCH" == "amd64" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     TAG=$(grep "FROM " Dockerfile | sed 's/.*://')
     docker tag spanghf37/knxd spanghf37/knxd:$TAG
-    docker tag spanghf37/knxd spanghf37/knxd:latest
+    docker tag spanghf37/knxd spanghf37/knxd:amd64
     docker push spanghf37/knxd:$TAG
-    docker push spanghf37/knxd:latest
+    docker push spanghf37/knxd:amd64
   fi
