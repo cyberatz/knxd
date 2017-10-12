@@ -12,4 +12,3 @@ script:
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     docker tag spanghf37/knxd spanghf37/knxd:amd64
     docker push spanghf37/knxd:amd64
-  fi
