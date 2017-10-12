@@ -9,11 +9,7 @@ script:
 - docker run spanghf37/knxd uname -a
 # push image
 - >
-  if [ "$TRAVIS_BRANCH" == "amd64" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    TAG=$(grep "FROM " Dockerfile | sed 's/.*://')
-    docker tag spanghf37/knxd spanghf37/knxd:$TAG
     docker tag spanghf37/knxd spanghf37/knxd:amd64
-    docker push spanghf37/knxd:$TAG
     docker push spanghf37/knxd:amd64
   fi
