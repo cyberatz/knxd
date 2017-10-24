@@ -27,5 +27,5 @@ iptables -A INPUT -p tcp --dport 18081 -j ACCEPT
 #knxd rules (assuming server listening on 6720 and 3671)
 iptables -A INPUT -p tcp --dport 3671 -j ACCEPT
 iptables -A INPUT -p udp --dport 3671 -j ACCEPT
-iptables -A INPUT -p tcp --dport 6720 -j ACCEPT```
-
+iptables -A INPUT -p tcp --dport 6720 -j ACCEPT
+```
