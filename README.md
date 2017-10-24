@@ -1,11 +1,11 @@
 ![Build Status](https://travis-ci.org/spanghf37/knxd.svg?branch=master)
 
 # knxd
-alpine-knxd docker container for raspberry-pi 64bits
+alpine-knxd docker container for amd64bits.
 
 # 1. Configuration files
 
-Copy and edit ```knxd.ini``` to ```/home/docker/knxd``` on the Raspberry Pi.
+Copy and edit ```knxd.ini``` to ```/home/docker/knxd``` on the Docker host.
 
 # 2. docker run command
 
