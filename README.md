@@ -16,7 +16,8 @@ docker run --restart=always --net=host -v /home/docker/knxd/:/etc/knxd/ spanghf3
 # 3. Edit iptables (firewall) rules
 On Photon OS (VMWare), edit script ```iptables``` under ```/etc/systemd/scripts``` and add the following at the end of file:
 
-``` #Homebridge-KNX rules
+```
+#Homebridge-KNX rules
 iptables -A INPUT -p tcp --dport 5353 -j ACCEPT
 iptables -A INPUT -p udp --dport 5353 -j ACCEPT
 iptables -A INPUT -p tcp --dport 51826 -j ACCEPT
