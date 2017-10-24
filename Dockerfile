@@ -27,7 +27,7 @@ RUN set -xe \
      && make \
      && make install
 
-EXPOSE 3672 6720
+# EXPOSE 3672 6720
 
 VOLUME /etc/knxd
 
