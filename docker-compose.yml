@@ -6,7 +6,7 @@ services:
     #env_file: .env
     image: spanghf37/knxd:amd64
     #build: .
-    networks:
+    network_mode:
       - host
     volumes:
       # mount docker volumes persistant inside docker container
