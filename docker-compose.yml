@@ -24,19 +24,18 @@ services:
       #redis:
         #condition: service_healthy
   # homebridge-knx
-  #db:
-    # Official MYSQL docker image
+  homebridge-knx:
     #env_file: .env
-    #image: amd64/mysql:latest
-    #restart: always
-    #healthcheck:
-    #  test: "/usr/bin/mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} --execute \"SHOW DATABASES;\""
-    #  interval: 5s
-    #  timeout: 5s
-    #  retries: 20
-    #restart: always
-    #volumes:
-    #  - /mnt/data/configs/emoncms/emon-db-data:/var/lib/mysql
+    #image: spanghf37/homebridge-knx:amd64
+    restart: always
+    healthcheck:
+      test: "curl -f http://localhost:80/emoncms"
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: always
+    volumes:
+      - /home/docker/homebridge/:/root/.homebridge/
   #redis:
     # Official redis image
     #image: amd64/redis:latest
@@ -52,5 +51,5 @@ services:
 
 volumes:
   knxd:
-  #emon-db-data:
+  homebridge:
   #emon-redis-data:
