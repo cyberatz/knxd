@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SERVICE="$1"
+RESULT=`knxtool groupread i:localhost 0/1/6`
+
+if [ "${RESULT:-null}" = null ]; then
+    echo "not running"
+else
+    echo "running"
+fi
