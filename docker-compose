@@ -1,0 +1,57 @@
+version: '2.1'
+
+services:
+
+  knxd:
+    #env_file: .env
+    image: spanghf37/knxd:amd64
+    #build: .
+    networks:
+      - host
+    volumes:
+      # mount docker volumes persistant inside docker container
+      - /home/docker/knxd/:/etc/knxd/
+    #links:
+      # Link to MYSQL DB (see below)
+      #- db
+      #- redis
+    healthcheck:
+      test: "curl -f http://localhost:80/emoncms"
+      interval: 5s
+      retries: 10
+    #depends_on:
+      #db:
+        #condition: service_healthy
+      #redis:
+        #condition: service_healthy
+  # homebridge-knx
+  #db:
+    # Official MYSQL docker image
+    #env_file: .env
+    #image: amd64/mysql:latest
+    #restart: always
+    #healthcheck:
+    #  test: "/usr/bin/mysql --user=${MYSQL_USER} --password=${MYSQL_PASSWORD} --execute \"SHOW DATABASES;\""
+    #  interval: 5s
+    #  timeout: 5s
+    #  retries: 20
+    #restart: always
+    #volumes:
+    #  - /mnt/data/configs/emoncms/emon-db-data:/var/lib/mysql
+  #redis:
+    # Official redis image
+    #image: amd64/redis:latest
+    #env_file:
+    #  - '.env'
+    #healthcheck:
+    #  test: ["CMD", "redis-cli","ping"]
+    #  interval: 5s
+    #  retries: 10
+    #restart: always
+    #volumes:
+    #  - /mnt/data/configs/emoncms/emon-redis-data:/data
+
+volumes:
+  knxd:
+  #emon-db-data:
+  #emon-redis-data:
