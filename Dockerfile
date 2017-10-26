@@ -29,10 +29,12 @@ RUN set -xe \
 
 # EXPOSE 3672 6720
 
-VOLUME /etc/knxd
+# VOLUME /etc/knxd
 
 COPY docker-healthcheck /home/docker-healthcheck
 
 RUN chmod +x /home/docker-healthcheck
+
+COPY knxd.ini /etc/knxd/knxd.ini
 
 CMD ["knxd","/etc/knxd/knxd.ini"]
