@@ -31,6 +31,8 @@ RUN set -xe \
 
 VOLUME /etc/knxd
 
-HEALTHCHECK --interval=5s --timeout=3s CMD knxtool groupread ip:localhost 0/1/6 || exit 1
+COPY docker-healthcheck /home/docker-healthcheck
+
+RUN chmod +x /home/docker-healthcheck
 
 CMD ["knxd","/etc/knxd/knxd.ini"]
