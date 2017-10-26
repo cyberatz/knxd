@@ -29,6 +29,7 @@ services:
     #env_file: .env
     image: spanghf37/homebridge-knx:amd64
     restart: always
+    network_mode: host
     healthcheck:
       test: "curl -f http://localhost:18081"
       interval: 5s
