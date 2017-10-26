@@ -16,7 +16,7 @@ services:
       #- db
       #- redis
     healthcheck:
-      test: "curl -f http://localhost:80/emoncms"
+      test: "/home/docker-healthcheck"
       interval: 5s
       retries: 10
     #depends_on:
