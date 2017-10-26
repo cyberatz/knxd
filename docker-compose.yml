@@ -29,7 +29,7 @@ services:
     #image: spanghf37/homebridge-knx:amd64
     restart: always
     healthcheck:
-      test: "curl -f http://localhost:80/emoncms"
+      test: "curl -f http://localhost:18081"
       interval: 5s
       timeout: 5s
       retries: 20
