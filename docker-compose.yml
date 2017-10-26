@@ -5,6 +5,7 @@ services:
   knxd:
     #env_file: .env
     image: spanghf37/knxd:amd64
+    restart: always
     #build: .
     network_mode: host
     volumes:
@@ -26,7 +27,7 @@ services:
   # homebridge-knx
   homebridge-knx:
     #env_file: .env
-    #image: spanghf37/homebridge-knx:amd64
+    image: spanghf37/homebridge-knx:amd64
     restart: always
     healthcheck:
       test: "curl -f http://localhost:18081"
