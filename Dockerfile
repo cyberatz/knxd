@@ -35,6 +35,4 @@ COPY docker-healthcheck /home/docker-healthcheck
 
 RUN chmod +x /home/docker-healthcheck
 
-COPY knxd.ini /etc/knxd/knxd.ini
-
 CMD ["knxd","/etc/knxd/knxd.ini"]
