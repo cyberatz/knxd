@@ -1,0 +1,11 @@
+#!/bin/sh
+
+SERVICE="$1"
+RESULT=`knxtool groupread ip:localhost 0/1/6`
+
+if [ "${RESULT}" = "Send request" ]; then
+    echo "knxd healthcheck OK"
+    exit 0
+fi
+echo "knx healthcheck ERROR"
+exit 1
