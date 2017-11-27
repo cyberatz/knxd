@@ -1,6 +1,6 @@
-FROM arm64v8/alpine:latest
+FROM arm32v6/alpine:latest
 
-COPY tmp/qemu-aarch64-static /usr/bin/qemu-aarch64-static
+COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
 
 RUN set -xe \
     && apk update \
