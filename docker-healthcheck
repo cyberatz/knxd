@@ -1,7 +1,9 @@
 #!/bin/sh
 
 SERVICE="$1"
-RESULT=`knxtool groupread ip:localhost 0/1/6`
+
+# TODO make this a ENV requirement
+RESULT=`knxtool groupread ip:localhost 1/1/150`
 
 if [ "${RESULT}" = "Send request" ]; then
     echo "knxd healthcheck OK"
