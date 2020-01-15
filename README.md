@@ -1,6 +1,6 @@
-![Build Status](https://travis-ci.org/spanghf37/knxd.svg?branch=master)
+![Build Status](https://travis-ci.org/andrevs/knxd.svg?branch=master)
 
 # knxd
-alpine-knxd docker container for amd64bits.
+alpine-knxd docker container for amd64.
 
-See main app: https://github.com/spanghf37/knx-control.
+See main app by Spanghf37: https://github.com/spanghf37/knx-control.
