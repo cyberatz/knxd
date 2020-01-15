@@ -1,4 +1,3 @@
-![Build Status](https://travis-ci.org/andrevs/knxd.svg?branch=master)
 ![Build Status](https://travis-ci.com/cyberatz/knxd.svg?branch=amd64)
 
 # knxd
