@@ -5,7 +5,7 @@ alpine-knxd docker container for amd64.
 
 See main app by Spanghf37: https://github.com/spanghf37/knx-control.
 
-# Example docker-compose
+# Example docker-compose.yml
 ```
 version: '3'
 services:  
@@ -26,9 +26,8 @@ services:
       retries: 100
 ```
 
-# Example knxd.ini
+# Example /etc/knxd/knxd.ini
 ```
-knxd.ini
 [B.unix]
 path = /tmp/eib
 server = knxd_unix
