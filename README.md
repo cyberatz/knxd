@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.com/cyberatz/knxd.svg?branch=amd64)
+<a href="https://travis-ci.com/github/cyberatz/knxd">![Build Status](https://travis-ci.com/cyberatz/knxd.svg?branch=amd64)
 
 # knxd
 alpine-knxd docker container for amd64.
