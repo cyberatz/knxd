@@ -3,7 +3,7 @@
 # knxd
 alpine-knxd docker container for amd64.
 
-See main app by Spanghf37: https://github.com/spanghf37/knx-control.
+Forked from main app by "Spanghf37" @https://github.com/spanghf37/knx-control
 
 # Example docker-compose.yml
 ```
