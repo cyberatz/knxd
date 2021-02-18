@@ -2,6 +2,7 @@ sudo: required
 services:
 - docker
 language: bash
+os: linux
 dist: alpine
 script:
 # build image
