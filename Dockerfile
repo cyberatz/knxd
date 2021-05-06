@@ -1,4 +1,4 @@
-FROM amd64/alpine:latest
+FROM alpine:latest
 
 RUN set -xe \
     && apk update \
@@ -21,6 +21,7 @@ RUN set -xe \
                dev86 \
      && git clone https://github.com/knxd/knxd.git \
      && cd knxd \
+     && chmod +x bootstrap.sh \
      && ./bootstrap.sh \
      && ./configure --disable-systemd --enable-eibnetip --enable-eibnetserver --enable-eibnetiptunnel \
      && mkdir -p src/include/sys && ln -s /usr/lib/bcc/include/sys/cdefs.h src/include/sys \
